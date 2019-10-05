@@ -1,13 +1,15 @@
-import PropTypes from 'prop-types'
-import React from 'react'
+import { Link } from "gatsby"
+import PropTypes from "prop-types"
+import React from "react"
 
-import Navbar from './navbar'
+import Navigation from "./partials/navigation"
 
 const Header = ({ siteTitle }) => (
-  <header className="site-header">
-    <section className="navigation">
-      <Navbar siteTitle={siteTitle} />
-    </section>
+  <header className="site__header">
+    <div className="site__header-logo">
+      <Link to="/">Joel Krause.</Link>
+    </div>
+    <Navigation />
   </header>
 )
 
@@ -16,7 +18,7 @@ Header.propTypes = {
 }
 
 Header.defaultProps = {
-  siteTitle: '',
+  siteTitle: ``,
 }
 
 export default Header
